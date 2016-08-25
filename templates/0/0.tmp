@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title><?php echo $head["title"];?></title>
+	<?php get_css();?>
+	
+
+<link rel="stylesheet" type="text/css" href="<?php echo $tmp_dir; ?>/csss/box.css" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link rel="stylesheet" href="<?php echo $tmp_dir; ?>/prefix.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="<?php echo $tmp_dir; ?>/style.css" type="text/css" media="screen, projection" />
+	
+	<script src="<?php echo $tmp_dir; ?>/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo $tmp_dir; ?>/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo $tmp_dir; ?>/js/jcarousellite.js"></script>
+	<script type="text/javascript" src="<?php echo $tmp_dir; ?>/js/login.js"></script>
+ 	<script src="<?php echo $tmp_dir; ?>/js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#tooTop").click(function(a){a.preventDefault();var b=this.href;var c=b.split("#");var d=c[1];var e=$("#"+d).offset();var f=e.top;$('html, body').animate({scrollTop:f},900)});
+		});
+	</script>
+	
+	
+	<link href="<?php echo $tmp_dir; ?>css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="<?php echo $tmp_dir; ?>css/prettyPhoto.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<script src="<?php echo $tmp_dir; ?>js/prettyPhoto.js"></script>
+	<script src="<?php echo $tmp_dir; ?>js/script.js"></script>
+	<style type="text/css">
+   img{border:0px;}
+  </style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({opacity:0.2, deeplinking: false, show_title:false, animation_speed: 'fast',social_tools: '',theme: 'light_square',gallery_markup: ''});});
+	</script>
+	
+	<script type="text/javascript">
+function show_content() {
+$.get("last_sale.php", "", function (data){
+$('#last_sale').html(data); }); }
+
+setInterval(function() {
+$.get("last_sale.php", "", function (data){
+$('#last_sale').html(data); }); }, 60000);
+
+show_content();
+</script>
+</head>
+
+<body id="page">
+<noscript><div id="noscript">Внимание, для полнценной работы сайта, нужно включить <b>JavaScript!</b></div></noscript>
+<!--[if lte IE 7]><div id="ie">Внимание, ваш браузер устарел. Корректная работа сайта не гарантируется!</div><![endif]-->
+<div id="wrapper">
+	<header id="header">
+		<div class="logotype">
+			<h1><a href="/"><img  style="width: 1060px; height: 50px; margin-top: -10px;" src="<?php echo $tmp_dir; ?>/images/logo.png" alt="Тайтл сайта" /></a></h1>
+			<p class="legend">Интернет-магазин</p>
+		</div>
+
+
+	</header>
+
+<nav id="nav" class="nav">
+		<div class="navContent">
+				<ul>
+				<li><a href="/">Главная</a></li>
+				<li><a href="about.php">О магазине</a></li>
+				<li><a href="http://creative-studio.w.pw/files/pictures/1407657292.png" target="_blank">Способы оплаты</a></li>
+				<li><a href="voprosy.php">Вопросы</a></li>
+                                <li><a href="http://primearea.ru/?p=customer" target="_blank">Мои покупки</a></li>
+			 				<li><a href="http://vk.com/topic-68252655_30443635" target="_blank">Отзывы</a></li>
+			</ul><div class="myProfile"><a id="openForm" href="#">FAQ</a></div>		</div>
+		<div id="profilePopup">
+			<div class="popupContent">
+			<!--content-->
+		Здесь приведены наиболее частые вопросы и ответы на них:<br><br>
+<font color="green">Вопрос: </font>Как мне купить товар?</p>
+<font color="red">Ответ: </font>Выбираете нужный товар и нажимаете под ним кнопку "Оплатить"</p><br>
+<font color="green">Вопрос: </font>Как я получу товар после оплаты?</p>
+<font color="red">Ответ: </font>Как только Вы оплатите товар, он придет Вам на почту. Также Ваши покупки можете посмотреть <a href="http://primearea.ru/?p=customer">тут</a></p><br>
+<font color="green">Вопрос: </font>Есть какие-либо гарантия на предоставляемый товар?</p>
+<font color="red">Ответ: </font>На ключи/гифты гарантия пожизненная. На аккаунты и т.п. гарантия только на момент продажи<br><br>
+<font color="green">Вопрос: </font>Если я часто покупаю у Вас товар, могу ли я получить скидку?</p>
+<font color="red">Ответ: </font>Да, практически на весь товар предоставляются скидки в зависимости от кол-ва совершенных Вами покупок<br><br>
+<font color="green">Вопрос: </font>Могу ли я получать скидку при оставлении положительного отзыва после покупки товара?</p>
+<font color="red">Ответ: </font>Да, после того как Вы оплатили товар, можете оставить положительный отзыв и получить 5-8% от стоимости товара<br><br>
+<font color="green">Вопрос: </font>Я купил аккаунт, но не могу войти в него, что делать?</p>
+<font color="red">Ответ: </font>В течении 2 часов с момента продажи Вы можете связаться с нами для решения данной проблемы<br><br>
+		<!--/content-->
+			</div>
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+	$(function(){
+		$(".slides").jCarouselLite({
+			visible: 1,
+			btnNext: ".next",
+			btnPrev: ".prev",
+			speed: 500
+		});
+
+		$(".minislides").jCarouselLite({
+			visible: 1,
+			auto: 3000,
+			speed: 900
+		});
+	});
+	</script>
+	<div class="sliders">
+		<div class="bigSlider">
+			<div class="slides">
+				<ul>
+					<li><img src="http://creative-studio.w.pw/files/pictures/1407585123.png" alt="" /><p>GTA V Скоро в продаже.</p></li>
+					<li><img src="http://creative-studio.w.pw/files/pictures/1407585454.png" alt="" /><p>Rust Скоро в продаже.</p></li>
+		
+				</ul>
+			</div>
+			<div class="next">Вперёд</div>
+			<div class="prev">Назад</div>
+		</div>
+
+
+		<div class="miniSlider">
+			<div class="minislides">
+				<ul>
+					<li><img src="http://img1.picload.org/image/lglilai/slide_esports.jpg" alt="" /><p><a href="http://steam-vs-origin.ru/#!p=product!prid=11534" target="_blank">Рандомные вещи Counter-Strike: Global Offensive</a></p></li>
+					<li><img src="http://aleksey-timaschew.narod.ru/nfsworld/e11c7f861ca8d9e48c4648339146f8b4.jpg" alt="" /><p><a href="http://steam-vs-origin.ru/#!p=product!prid=8986" target="_blank">Аккаунт NFS World</a></p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<section id="middle">
+		<div class="middleContent">
+				<div id="container">
+<aside id="side" style="float:left;">
+					
+
+
+
+
+					<div class="block">
+						<h3>Навигация по категориям</h3>
+						
+                                          <ul class="categories">
+
+<div id="primearea_category" style="width: 225px; min-width: 1px;">
+    <div style="text-align:center;"><img src="http://primearea.ru/shopsite/v1.1/img/preloader.gif" alt="��������..."></div>
+    <noscript>��� ������� �� ������������ JavaScript.</noscript>
+</div>
+</div>
+							<?php show_goods_group($GLOBALS["categories_status"]); ?>
+						</ul>
+					
+                                        <div class="block">
+						<h3>Связь с администрацией</h3>
+						<ul class="categories">
+<center><b><span style="color:#169b1; text-shadow: 0px 0px 2px #100b1;"><br>Борель Сергей<br></span></b>
+<br>
+<img src="<?php echo $tmp_dir; ?>/images/skype.png" alt="ICQ">Neo_Airmax
+</center>
+						</ul>
+					</div>
+
+					
+                                          <div class="block">
+						<h3>Гарантии магазина</h3>
+						<ul class="categories">
+							<center>WMID: 392532414411 <a href=""><img border="0" src="https://stats.wmtransfer.com/Levels/pWMIDLevel.aspx?wmid=392532414411&w=35&h=18&bg=0XDBE2E9" alt="BL уровень"></a></center>
+							<center><a href="https://passport.webmoney.ru/asp/certView.asp?wmid=392532414411%22target=%22_blank"><img src="https://passport.webmoney.ru/images/bat130.png" title="Персональный аттестат"></a></center>
+						</ul>
+					</div>
+					<div class="block">
+						<h3>Рекомендуемый товар</h3>
+						<ul class="categories">
+							<center>
+
+							<a href="http://steam-vs-origin.ru/#!p=product!prid=11416" target="_blank"><img border="0" src="<?php echo $tmp_dir; ?>/pic/cs.jpg" alt="Купить STEAM аккаунт CS 1.6" width="210" height="90"></a><br><br>
+							</center>
+						</ul>
+					</div>
+				</aside>
+
+<aside id="side">
+					<div class="block">
+						<h3>Скачать:</h3>
+						<ul class="categories">
+							<center><a href="http://cdn.steampowered.com/download/SteamInstall.msi"><img border="0" src="<?php echo $tmp_dir; ?>/images/steam1.png" alt="Скачать STEAM"></a></center>
+							<center><a href="http://www.dm.origin.com/download"><img border="0" src="<?php echo $tmp_dir; ?>/images/origin.png" alt="Скачать ORIGIN"></a></center>
+						</ul>
+					</div>
+					<div class="block">
+						<h3>Группа ВКонтакте</h3>
+						<ul class="categories">
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+
+<!-- VK Widget -->
+<div id="vk_groups"></div>
+<script type="text/javascript">
+VK.Widgets.Group("vk_groups", {mode: 0, width: "233", height: "300", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 68252655);
+</script>
+
+
+<!-- VK Widget -->
+ 
+						</ul>
+					</div>
+						
+										<div class="block">
+						<h3>Способы оплаты</h3>
+						<ul class="categories">
+							<center><a href="/payment.php"><img border="0" src="<?php echo $tmp_dir; ?>/images/pay.png" alt="Способы оплаты товара"></a>
+							<form action="type_rate.php" method="post">
+Валюта:&nbsp;
+<?php get_type_rate($GLOBALS["default_rt"]);?>
+</form></center>
+						</ul>
+					</div>
+				</aside>
+					
+					<div id="content">
+				<article class="news">
+							<div class="newsContent">
+
+									<div class="newsText"><?php show_content(); ?></div>
+									
+						</article>
+						<div class="pageScroller">
+							<a id="tooTop" href="#page">Наверх</a>
+						</div>
+					</div>
+				
+
+				
+				</div>
+		</div>
+	</section>
+
+
+	<nav id="navFooter" class="nav">
+		<div class="navContent">
+		<ul>
+				<li><a href="/">Главная</a></li>
+				<li><a href="about.php">О магазине</a></li>
+				<li><a href="http://creative-studio.w.pw/files/pictures/1407657292.png" target="_blank">Способы оплаты</a></li>
+				<li><a href="voprosy.php">Вопросы</a></li>
+				<li><a href="http://primearea.ru/?p=customer" target="_blank"">Мои покупки</a></li>
+			 				<li><a href="http://vk.com/topic-68252655_30443635" target="_blank">Отзывы</a></li>
+			</ul>			
+		</div>
+	</nav>
+<footer id="footer">
+		<p class="copyright"><b>Steam-vs-Origin.ru</b> &copy; 2014 <br />
+		Интернет-магазин <div style="display:none;">
+  </div>
+		<div class="footerElement">
+			<ul class="counters">
+				<li><a href="https://passport.webmoney.ru/asp/certView.asp?wmid=392532414411"><img src="http://www.webmoney.ru/img/icons/88x31_wm_v_blue_on_white_ru.png" alt="Персональный аттестат" /></a></li>
+				<li><a href="http://www.megastock.ru/"><img src="http://www.webmoney.ru/img/icons/88x31_wm_blue_on_transparent_ru.png" alt="MegaStock" /></a></li>
+			 <li></li>
+</ul>
+
+			<ul class="social">
+				<li><a href="http://vk.com/neo_airmax"><img src="<?php echo $tmp_dir; ?>/images/vk.png" alt="Мы Вконтакте" /></a></li>
+			</ul>
+		</div>
+	</footer>
+
+</div> 
+</body>
+</html>i>
+			</ul>
+		</div>
+	</footer>
+
+</div> 
+</body>
+</html>
